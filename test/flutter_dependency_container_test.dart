@@ -62,7 +62,7 @@ class ZClass {
 
 void main() {
   group("Default Test", () {
-    IDependencyContainer container = MockContainer();
+    IDependencyContainer container = DependencyContainer();
     test("Setting dependency by key", () {
       expect(() {
         container.registerByName("one", (container) {
@@ -142,7 +142,7 @@ void main() {
     });
 
     test("Circular", () {
-      IDependencyContainer container = MockContainer();
+      IDependencyContainer container = DependencyContainer();
       expect(() {
         container.register(CClass, (container) {
           final dClass = container.get(DClass);
