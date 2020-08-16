@@ -48,3 +48,6 @@ container.register(ABClass, (container) {
 //It will automatically build AClass, BClass, and key "one"
 //since it is referred in the ABClass builder
 final abClass = container.get<ABClass>();
+```
+# Footnote
+This project was inspired by [sarulabs/di](https://github.com/sarulabs/di)
