@@ -1,5 +1,5 @@
 # Flutter Dependency Container
-This is a flutter dependency container written in `Dart`. This is just a simple map with callback function used to retreive dependency. It will automatically construct dependency based on how you tell it how to build certain object. Also, this is reflect free!
+This is a flutter dependency container written in `Dart` that lazily build object only when needed. This is just a simple map with callback function used to retreive dependency. It will automatically construct dependency based on how you tell it how to build certain object. Also, this is reflect free solution!
 
 # How it works
 - **Register** certain object or class
@@ -15,7 +15,7 @@ This is a flutter dependency container written in `Dart`. This is just a simple 
 - Simply done
 
 # Usage
-```
+```dart
 IDependencyContainer container = DependencyContainer();
 
 //Register simple object by key
