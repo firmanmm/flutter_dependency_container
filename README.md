@@ -9,8 +9,9 @@ This is a flutter dependency container written in `Dart`. This is just a simple 
         - If **constructed** return them
         - Else
             - If **need dependency** then find
+                - If **circular** then throw `CircularDependencyException`
     - If **not found** then throw `UnResolvableDependencyException`
-    - If **circular** then throw `CircularDependencyException`
+    
 - Simply done
 
 # Usage
