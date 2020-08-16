@@ -5,10 +5,13 @@ This is a flutter dependency container written in `Dart`. This is just a simple 
 - **Register** certain object or class
 - Tell them how to **build** them
 - Try to **get** them
-    - If **found** then return
+    - If **found**
+        - If **constructed** return them
+        - Else
+            - If **need dependency** then find
     - If **not found** then throw `UnResolvableDependencyException`
     - If **circular** then throw `CircularDependencyException`
-- Done
+- Simply done
 
 # Usage
 ```
@@ -39,3 +42,8 @@ container.register(ABClass, (container) {
     final bClass = container.get<BClass>();
     return ABClass(aClass, bClass);
 });
+
+//Obtain ABClass first
+//It will automatically build AClass, BClass, and key "one"
+//since it is referred in the ABClass builder
+final abClass = container.get<ABClass>();
