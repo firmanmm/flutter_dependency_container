@@ -1,3 +1,5 @@
-## [0.0.1] - TODO: Add release date.
+## [0.0.1] - Initial Release.
 
-* TODO: Describe initial release.
+* Migrate
+* Refactor
+* Publicize
